@@ -4,11 +4,11 @@ import styled from "styled-components";
 //components
 import { Button } from "./Button";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <HeaderTitle>署名ジェネレータ</HeaderTitle>
-      <Button>テンプレートを選ぶ</Button>
+      {/* <Button>テンプレートを選ぶ</Button> */}
     </HeaderWrapper>
   );
 };

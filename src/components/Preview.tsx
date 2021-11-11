@@ -1,16 +1,10 @@
+//libraries
 import * as React from "react";
 import styled from "styled-components";
+//types
+import { InputType } from "../types/InputType";
 
-interface PreviewType {
-  name: string;
-  nameEn: string;
-  company: string;
-  department: string;
-  mailAdress: string;
-  phoneNumber: string;
-}
-
-export const Preview: React.FC<PreviewType> = (props) => {
+export const Preview: React.FC<InputType> = (props) => {
   console.log(props);
 
   return (
@@ -36,5 +30,5 @@ const PreviewWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 50vw;
-  padding: 20px;
+  padding: 60px;
 `;

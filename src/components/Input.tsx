@@ -1,72 +1,62 @@
+//libraries
 import * as React from "react";
 import styled from "styled-components";
+//types
+import { InputType } from "../types/InputType";
+//components
+import { InputItem } from "./InputItem";
 
-const { useState } = React;
-
-export const Input = (props) => {
+export const Input: React.FC<InputType> = (props) => {
   return (
     <>
       <InputWrapper>
-        <div>
-          <InputLabel htmlFor="name">名前</InputLabel>
-          <InputField
-            type="text"
-            name="name"
-            placeholder="山田 太郎"
-            onChange={(event) => props.setName(event.target.value)}
-            value={props.name}
+        <InputInner>
+          <InputNotion>
+            ※入力した内容が外部に送信されることはありません
+          </InputNotion>
+          <InputItem
+            type={"text"}
+            label={"名前"}
+            placeholder={"山田 太郎"}
+            name={props.name}
+            setState={props.setName}
           />
-        </div>
-        <div>
-          <InputLabel htmlFor="nameEn">名前（ローマ字）</InputLabel>
-          <InputField
-            type="text"
-            name="nameEn"
-            placeholder="Taro Yamada"
-            onChange={(event) => props.setNameEn(event.target.value)}
-            value={props.nameEn}
+          <InputItem
+            type={"text"}
+            label={"名前（ローマ字）"}
+            placeholder={"Taro Yamada"}
+            name={props.nameEn}
+            setState={props.setNameEn}
           />
-        </div>
-        <div>
-          <InputLabel htmlFor="company">会社名</InputLabel>
-          <InputField
-            type="text"
-            name="company"
-            placeholder="株式会社 富士山"
-            onChange={(event) => props.setCompany(event.target.value)}
-            value={props.company}
+          <InputItem
+            type={"text"}
+            label={"会社名"}
+            placeholder={"株式会社 富士山"}
+            name={props.company}
+            setState={props.setCompany}
           />
-        </div>
-        <div>
-          <InputLabel htmlFor="department">部署名</InputLabel>
-          <InputField
-            type="text"
-            name="department"
-            placeholder="営業部 1課"
-            onChange={(event) => props.setDepartment(event.target.value)}
-            value={props.department}
+          <InputItem
+            type={"textarea"}
+            label={"部署名"}
+            placeholder={"営業部 1課"}
+            name={props.department}
+            setState={props.setDepartment}
           />
-        </div>
-        <div>
-          <InputLabel htmlFor="mailAdress">メールアドレス</InputLabel>
-          <InputField
-            type="text"
-            name="mailAdress"
-            placeholder="yamada@example.co.jp"
-            onChange={(event) => props.setMailAdress(event.target.value)}
-            value={props.mailAdress}
+          <InputItem
+            type={"text"}
+            label={"メールアドレス"}
+            placeholder={"yamada@example.co.jp"}
+            name={props.mailAdress}
+            setState={props.setMailAdress}
           />
-        </div>
-        <div>
-          <InputLabel htmlFor="phoneNumber">電話番号</InputLabel>
-          <InputField
-            type="text"
-            name="phoneNumber"
-            placeholder="03-1234-5678"
-            onChange={(event) => props.setPhoneNumber(event.target.value)}
-            value={props.phoneNumber}
+          <InputItem
+            type={"text"}
+            label={"電話番号"}
+            placeholder={"03-1234-5678"}
+            name={props.phoneNumber}
+            setState={props.setPhoneNumber}
           />
-        </div>
+        </InputInner>
       </InputWrapper>
     </>
   );
@@ -74,22 +64,22 @@ export const Input = (props) => {
 
 const InputWrapper = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  padding: 60px;
+  background-color: #dddddd;
+`;
+
+const InputInner = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   gap: 40px;
-  width: 50vw;
-  padding: 20px;
-  background-color: #e5e5e5;
+  width: 100%;
 `;
 
-const InputLabel = styled.label`
-  display: inline-block;
-  width: 120px;
-`;
-
-const InputField = styled.input`
-  &::placeholder {
-    color: #d5d5d5;
-  }
+const InputNotion = styled.p`
+  font-size: 12px;
 `;
