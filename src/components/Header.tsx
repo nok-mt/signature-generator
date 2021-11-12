@@ -3,7 +3,7 @@ import * as React from "react";
 import styled from "styled-components";
 //types
 //components
-import { Button } from "./Button";
+import { Button } from "./index";
 
 interface Props {
   template: boolean;
@@ -24,6 +24,7 @@ export const Header: React.FC<Props> = (props) => {
     </HeaderWrapper>
   );
 };
+export default Header;
 
 const HeaderWrapper = styled.header`
   display: flex;

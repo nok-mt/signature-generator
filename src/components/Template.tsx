@@ -28,6 +28,7 @@ export const Template: React.FC<TemplateType> = (props) => {
     </TemplateWrapper>
   );
 };
+export default Template;
 
 const TemplateWrapper = styled.div`
   width: 50vw;

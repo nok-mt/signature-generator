@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const Main = (props) => {
   return <MainWrapper>{props.children}</MainWrapper>;
 };
+export default Main;
 
 const MainWrapper = styled.main`
   display: flex;

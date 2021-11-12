@@ -8,6 +8,7 @@ interface Props {
 export const Button: React.FC<Props> = (props) => {
   return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
 };
+export default Button;
 
 const StyledButton = styled.button`
   padding: 8px 16px;

@@ -10,20 +10,23 @@ export const Preview: React.FC<InputType> = (props) => {
   return (
     <>
       <PreviewWrapper>
-        <PreviewItem>{props.lineTemp}</PreviewItem>
-        <PreviewItem>{props.name}</PreviewItem>
-        <PreviewItem>{props.nameEn}</PreviewItem>
-        <PreviewItem>{props.company}</PreviewItem>
-        <PreviewItem>{props.department}</PreviewItem>
-        <PreviewItem>{props.address}</PreviewItem>
-        <PreviewItem>{props.mailAddress}</PreviewItem>
-        <PreviewItem>{props.phoneNumber}</PreviewItem>
-        <PreviewItem>{props.url}</PreviewItem>
-        <PreviewItem>{props.lineTemp}</PreviewItem>
+        <div>
+          <PreviewItem>{props.lineTemp}</PreviewItem>
+          <PreviewItem>{props.name}</PreviewItem>
+          <PreviewItem>{props.nameEn}</PreviewItem>
+          <PreviewItem>{props.company}</PreviewItem>
+          <PreviewItem>{props.department}</PreviewItem>
+          <PreviewItem>{props.address}</PreviewItem>
+          <PreviewItem>{props.mailAddress}</PreviewItem>
+          <PreviewItem>{props.phoneNumber}</PreviewItem>
+          <PreviewItem>{props.url}</PreviewItem>
+          <PreviewItem>{props.lineTemp}</PreviewItem>
+        </div>
       </PreviewWrapper>
     </>
   );
 };
+export default Preview;
 
 const PreviewWrapper = styled.div`
   display: flex;

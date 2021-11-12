@@ -4,7 +4,7 @@ import styled from "styled-components";
 //types
 import { InputType } from "../types/InputType";
 //components
-import { InputItem } from "./InputItem";
+import { InputItem } from "./index";
 
 export const Input: React.FC<InputType> = (props) => {
   return (
@@ -75,6 +75,7 @@ export const Input: React.FC<InputType> = (props) => {
     </>
   );
 };
+export default Input;
 
 const InputWrapper = styled.div`
   display: flex;

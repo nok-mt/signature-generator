@@ -29,6 +29,8 @@ export const InputItem: React.FC<InputItemType> = (props) => {
   );
 };
 
+export default InputItem;
+
 const InputItemWrapper = styled.div`
   display: flex;
   align-items: stretch;

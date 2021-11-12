@@ -3,11 +3,7 @@ import * as React from "react";
 import { render } from "react-dom";
 import { createGlobalStyle } from "styled-components";
 //components
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { Preview } from "./components/Preview";
-import { Input } from "./components/Input";
-import { Template } from "./components/Template";
+import { Header, Main, Preview, Input, Template } from "./components/index";
 
 const { useState } = React;
 
