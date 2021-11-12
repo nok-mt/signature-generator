@@ -15,21 +15,21 @@ export const Input: React.FC<InputType> = (props) => {
             ※入力した内容が外部に送信されることはありません
           </InputNotion>
           <InputItem
-            type={"text"}
+            type={"input"}
             label={"名前"}
             placeholder={"山田 太郎"}
             name={props.name}
             setState={props.setName}
           />
           <InputItem
-            type={"text"}
+            type={"input"}
             label={"名前（ローマ字）"}
             placeholder={"Taro Yamada"}
             name={props.nameEn}
             setState={props.setNameEn}
           />
           <InputItem
-            type={"text"}
+            type={"input"}
             label={"会社名"}
             placeholder={"株式会社 富士山"}
             name={props.company}
@@ -43,18 +43,32 @@ export const Input: React.FC<InputType> = (props) => {
             setState={props.setDepartment}
           />
           <InputItem
-            type={"text"}
-            label={"メールアドレス"}
-            placeholder={"yamada@example.co.jp"}
-            name={props.mailAdress}
-            setState={props.setMailAdress}
+            type={"textarea"}
+            label={"住所"}
+            placeholder={"〒123-4567 東京都 〇〇区 1-2-3 〇〇ビル ○F"}
+            name={props.address}
+            setState={props.setAddress}
           />
           <InputItem
-            type={"text"}
+            type={"input"}
+            label={"メールアドレス"}
+            placeholder={"yamada@example.co.jp"}
+            name={props.mailAddress}
+            setState={props.setMailAddress}
+          />
+          <InputItem
+            type={"input"}
             label={"電話番号"}
             placeholder={"03-1234-5678"}
             name={props.phoneNumber}
             setState={props.setPhoneNumber}
+          />
+          <InputItem
+            type={"input"}
+            label={"URL"}
+            placeholder={"https://www.example.co.jp"}
+            name={props.url}
+            setState={props.setUrl}
           />
         </InputInner>
       </InputWrapper>
@@ -66,6 +80,7 @@ const InputWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
   width: 50vw;
   padding: 60px;
   background-color: #dddddd;

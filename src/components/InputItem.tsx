@@ -8,7 +8,7 @@ export const InputItem: React.FC<InputItemType> = (props) => {
   return (
     <InputItemWrapper>
       <InputLabel htmlFor={props.name}>{props.label}</InputLabel>
-      {props.type === "text" && (
+      {props.type === "input" && (
         <InputField
           type="text"
           name={props.name}
@@ -19,7 +19,6 @@ export const InputItem: React.FC<InputItemType> = (props) => {
       )}
       {props.type === "textarea" && (
         <InputTaxtarea
-          type="text"
           name={props.name}
           placeholder={props.placeholder}
           onChange={(event) => props.setState(event.target.value)}

@@ -1,14 +1,26 @@
 //libraries
 import * as React from "react";
 import styled from "styled-components";
+//types
 //components
 import { Button } from "./Button";
 
-export const Header: React.FC = () => {
+interface Props {
+  template: boolean;
+  setTemplate: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Header: React.FC<Props> = (props) => {
   return (
     <HeaderWrapper>
       <HeaderTitle>署名ジェネレータ</HeaderTitle>
-      {/* <Button>テンプレートを選ぶ</Button> */}
+      {props.template ? (
+        <Button onClick={() => props.setTemplate(false)}>署名を入力する</Button>
+      ) : (
+        <Button onClick={() => props.setTemplate(true)}>
+          テンプレートを選ぶ
+        </Button>
+      )}
     </HeaderWrapper>
   );
 };

@@ -2,12 +2,12 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
 //components
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 import { Preview } from "./components/Preview";
 import { Input } from "./components/Input";
+import { Template } from "./components/Template";
 
 const { useState } = React;
 
@@ -27,36 +27,55 @@ const App: React.FC = () => {
   const [nameEn, setNameEn] = useState<string>("");
   const [company, setCompany] = useState<string>("");
   const [department, setDepartment] = useState<string>("");
-  const [mailAdress, setMailAdress] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [mailAddress, setMailAddress] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [url, setUrl] = useState<string>("");
+
+  const [lineTemp, setLineTemp] = useState<string>(
+    "──────────────────────────"
+  );
+
+  const [template, setTemplate] = useState<boolean>(false);
 
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header template={template} setTemplate={setTemplate} />
       <Main>
         <Preview
+          lineTemp={lineTemp}
           name={name}
           nameEn={nameEn}
           company={company}
           department={department}
-          mailAdress={mailAdress}
+          address={address}
+          mailAddress={mailAddress}
           phoneNumber={phoneNumber}
+          url={url}
         />
-        <Input
-          name={name}
-          nameEn={nameEn}
-          company={company}
-          department={department}
-          mailAdress={mailAdress}
-          phoneNumber={phoneNumber}
-          setName={setName}
-          setNameEn={setNameEn}
-          setCompany={setCompany}
-          setDepartment={setDepartment}
-          setMailAdress={setMailAdress}
-          setPhoneNumber={setPhoneNumber}
-        />
+        {template ? (
+          <Template lineTemp={lineTemp} setLineTemp={setLineTemp} />
+        ) : (
+          <Input
+            name={name}
+            nameEn={nameEn}
+            company={company}
+            department={department}
+            address={address}
+            mailAddress={mailAddress}
+            phoneNumber={phoneNumber}
+            url={url}
+            setName={setName}
+            setNameEn={setNameEn}
+            setCompany={setCompany}
+            setDepartment={setDepartment}
+            setAddress={setAddress}
+            setMailAddress={setMailAddress}
+            setPhoneNumber={setPhoneNumber}
+            setUrl={setUrl}
+          />
+        )}
       </Main>
     </>
   );
