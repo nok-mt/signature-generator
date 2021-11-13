@@ -25,6 +25,13 @@ export const Template: React.FC<TemplateType> = (props) => {
       >
         南国の風
       </div>
+      <div
+        onClick={() =>
+          props.setLineTemp("───────−- -  -　　　　　　-  - -−───────")
+        }
+      >
+        侘び寂び
+      </div>
     </TemplateWrapper>
   );
 };

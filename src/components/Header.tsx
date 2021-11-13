@@ -11,16 +11,16 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = (props) => {
+  const toggle = (): void => {
+    props.setTemplate((prevState) => !prevState);
+  };
+
   return (
     <HeaderWrapper>
       <HeaderTitle>署名ジェネレータ</HeaderTitle>
-      {props.template ? (
-        <Button onClick={() => props.setTemplate(false)}>署名を入力する</Button>
-      ) : (
-        <Button onClick={() => props.setTemplate(true)}>
-          テンプレートを選ぶ
-        </Button>
-      )}
+      <Button onClick={toggle}>
+        {props.template ? "署名を入力する" : "テンプレートを選ぶ"}
+      </Button>
     </HeaderWrapper>
   );
 };
