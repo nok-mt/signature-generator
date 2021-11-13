@@ -20,7 +20,6 @@ const TemplateItemWrapper = styled.div`
   gap: 16px;
   cursor: pointer;
   width: 100%;
-  max-width: 600px;
   padding: 16px;
   border-radius: 4px;
   font-size: 12px;

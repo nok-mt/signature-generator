@@ -7,7 +7,7 @@ import { TemplateItem } from "./index";
 
 export const Template: React.FC<TemplateType> = (props) => {
   return (
-    <TemplateWrapper>
+    <TemplateInner>
       <TemplateItem
         setLineTemp={props.setLineTemp}
         line={"─────────────────────────"}
@@ -30,23 +30,22 @@ export const Template: React.FC<TemplateType> = (props) => {
       />
       <TemplateItem
         setLineTemp={props.setLineTemp}
-        line={"○●-----------------------------------------------------------●○"}
-        name={"糸電話"}
+        line={"○●---------------------------------------------------------●○"}
+        name={"綱引き"}
       />
-    </TemplateWrapper>
+    </TemplateInner>
   );
 };
 export default Template;
 
-const TemplateWrapper = styled.div`
+const TemplateInner = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  width: 50vw;
-  padding: 60px;
-  background-color: #dddddd;
+  width: 100%;
+  max-width: 600px;
 
   @media screen and (max-width: 1024px) {
     width: 100vw;

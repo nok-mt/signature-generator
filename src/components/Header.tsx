@@ -30,6 +30,8 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  width: 100%;
   height: 60px;
   padding: 0 20px;
   background-color: #f2e85e;

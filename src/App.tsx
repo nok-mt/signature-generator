@@ -2,6 +2,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 //components
 import { Header, Main, Preview, Input, Template } from "./components/index";
 
@@ -17,6 +18,20 @@ const GlobalStyle = createGlobalStyle`
       color: #272f59;
     }
     `;
+
+const RightWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  min-height: calc(100vh - 60px);
+  padding: 60px;
+  background-color: #dddddd;
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    padding: 40px 20px;
+  }
+`;
 
 const App: React.FC = () => {
   const [name, setName] = useState("");
@@ -50,28 +65,30 @@ const App: React.FC = () => {
           phoneNumber={phoneNumber}
           url={url}
         />
-        {template ? (
-          <Template lineTemp={lineTemp} setLineTemp={setLineTemp} />
-        ) : (
-          <Input
-            name={name}
-            nameEn={nameEn}
-            company={company}
-            department={department}
-            address={address}
-            mailAddress={mailAddress}
-            phoneNumber={phoneNumber}
-            url={url}
-            setName={setName}
-            setNameEn={setNameEn}
-            setCompany={setCompany}
-            setDepartment={setDepartment}
-            setAddress={setAddress}
-            setMailAddress={setMailAddress}
-            setPhoneNumber={setPhoneNumber}
-            setUrl={setUrl}
-          />
-        )}
+        <RightWrapper>
+          {template ? (
+            <Template lineTemp={lineTemp} setLineTemp={setLineTemp} />
+          ) : (
+            <Input
+              name={name}
+              nameEn={nameEn}
+              company={company}
+              department={department}
+              address={address}
+              mailAddress={mailAddress}
+              phoneNumber={phoneNumber}
+              url={url}
+              setName={setName}
+              setNameEn={setNameEn}
+              setCompany={setCompany}
+              setDepartment={setDepartment}
+              setAddress={setAddress}
+              setMailAddress={setMailAddress}
+              setPhoneNumber={setPhoneNumber}
+              setUrl={setUrl}
+            />
+          )}
+        </RightWrapper>
       </Main>
     </>
   );
