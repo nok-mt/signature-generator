@@ -5,3 +5,4 @@ export { default as Preview } from "./Preview";
 export { default as Input } from "./Input";
 export { default as InputItem } from "./InputItem";
 export { default as Template } from "./Template";
+export { default as TemplateItem } from "./TemplateItem";

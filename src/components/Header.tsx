@@ -37,4 +37,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderTitle = styled.h1`
   font-size: 24px;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
 `;

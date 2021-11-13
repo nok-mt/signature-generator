@@ -85,6 +85,10 @@ const InputWrapper = styled.div`
   width: 50vw;
   padding: 60px;
   background-color: #dddddd;
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    padding: 40px 20px;
+  }
 `;
 
 const InputInner = styled.div`
@@ -94,6 +98,9 @@ const InputInner = styled.div`
   align-items: start;
   gap: 40px;
   width: 100%;
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+  }
 `;
 
 const InputNotion = styled.p`

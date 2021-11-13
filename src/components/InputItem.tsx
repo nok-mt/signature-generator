@@ -35,6 +35,9 @@ const InputItemWrapper = styled.div`
   display: flex;
   align-items: stretch;
   width: 100%;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const InputLabel = styled.label`
@@ -42,10 +45,15 @@ const InputLabel = styled.label`
   justify-content: center;
   align-items: center;
   width: 130px;
+  padding: 4px 8px;
   font-size: 14px;
   font-weight: 700;
   background-color: #272f59;
   color: #f2e85e;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    justify-content: start;
+  }
 `;
 
 const InputField = styled.input`

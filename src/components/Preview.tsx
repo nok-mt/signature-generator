@@ -35,6 +35,12 @@ const PreviewWrapper = styled.div`
   width: 50vw;
   height: calc(100vh - 60px);
   padding: 60px;
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    height: auto;
+    padding: 60px 20px;
+    font-size: 12px;
+  }
 `;
 
 const PreviewItem = styled.p`

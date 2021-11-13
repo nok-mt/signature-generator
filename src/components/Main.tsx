@@ -10,4 +10,8 @@ export default Main;
 const MainWrapper = styled.main`
   display: flex;
   min-height: calc(100vh - 60px);
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
