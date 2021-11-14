@@ -2,14 +2,20 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
 //components
-import { Header, Main, Preview, Input, Template } from "./components/index";
+import {
+  Header,
+  Main,
+  Preview,
+  Input,
+  Template,
+  RightSection,
+} from "./components/index";
 
 const { useState } = React;
 
 const GlobalStyle = createGlobalStyle`
-    body * {
+    * {
       box-sizing: border-box;
     }
     html,body,h1,h2,h3,h4,p,ul,li {
@@ -18,20 +24,6 @@ const GlobalStyle = createGlobalStyle`
       color: #272f59;
     }
     `;
-
-const RightWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  min-height: calc(100vh - 60px);
-  padding: 60px;
-  background-color: #dddddd;
-  @media screen and (max-width: 1024px) {
-    width: 100vw;
-    padding: 40px 20px;
-  }
-`;
 
 const App: React.FC = () => {
   const [name, setName] = useState("");
@@ -42,11 +34,9 @@ const App: React.FC = () => {
   const [mailAddress, setMailAddress] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [url, setUrl] = useState<string>("");
-
   const [lineTemp, setLineTemp] = useState<string>(
     "──────────────────────────"
   );
-
   const [template, setTemplate] = useState<boolean>(false);
 
   return (
@@ -65,7 +55,7 @@ const App: React.FC = () => {
           phoneNumber={phoneNumber}
           url={url}
         />
-        <RightWrapper>
+        <RightSection>
           {template ? (
             <Template lineTemp={lineTemp} setLineTemp={setLineTemp} />
           ) : (
@@ -88,7 +78,7 @@ const App: React.FC = () => {
               setUrl={setUrl}
             />
           )}
-        </RightWrapper>
+        </RightSection>
       </Main>
     </>
   );

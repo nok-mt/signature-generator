@@ -26,7 +26,7 @@ export const Preview: React.FC<InputType> = (props) => {
 };
 export default Preview;
 
-const PreviewWrapper = styled.div`
+const PreviewWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;

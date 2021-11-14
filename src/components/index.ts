@@ -6,3 +6,4 @@ export { default as Input } from "./Input";
 export { default as InputItem } from "./InputItem";
 export { default as Template } from "./Template";
 export { default as TemplateItem } from "./TemplateItem";
+export { default as RightSection } from "./RightSection";

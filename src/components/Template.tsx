@@ -33,6 +33,26 @@ export const Template: React.FC<TemplateType> = (props) => {
         line={"○●---------------------------------------------------------●○"}
         name={"綱引き"}
       />
+      <TemplateItem
+        setLineTemp={props.setLineTemp}
+        line={"◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇"}
+        name={"ひし餅"}
+      />
+      <TemplateItem
+        setLineTemp={props.setLineTemp}
+        line={">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>★☆★"}
+        name={"星に願いを"}
+      />
+      <TemplateItem
+        setLineTemp={props.setLineTemp}
+        line={"＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊"}
+        name={"花園"}
+      />
+      <TemplateItem
+        setLineTemp={props.setLineTemp}
+        line={"｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡*ﾟ"}
+        name={"トキメキ"}
+      />
     </TemplateInner>
   );
 };
