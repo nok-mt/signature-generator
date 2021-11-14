@@ -46,7 +46,7 @@ export const Template: React.FC<TemplateType> = (props) => {
       <TemplateItem
         setLineTemp={props.setLineTemp}
         line={"＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊"}
-        name={"花園"}
+        name={"秘密の花園"}
       />
       <TemplateItem
         setLineTemp={props.setLineTemp}

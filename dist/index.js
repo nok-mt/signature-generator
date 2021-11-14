@@ -38,7 +38,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-`,He=t=>(console.log(t),e.createElement(We,null,e.createElement("div",null,e.createElement(Qe,null,t.lineTemp),e.createElement(Qe,null,t.name),e.createElement(Qe,null,t.nameEn),e.createElement(Qe,null,t.company),e.createElement(Qe,null,t.department),e.createElement(Qe,null,t.address),e.createElement(Qe,null,t.mailAddress),e.createElement(Qe,null,t.phoneNumber),e.createElement(Qe,null,t.url),e.createElement(Qe,null,t.lineTemp)))),We=Ae.section`
+`,He=t=>(console.log(t),e.createElement(We,null,e.createElement("div",null,e.createElement(Qe,null,t.lineTemp),e.createElement(Qe,null,e.createElement("br",null),t.name),e.createElement(Qe,null,t.nameEn),e.createElement(Qe,null,t.company),e.createElement(Qe,null,t.department),e.createElement(Qe,null,t.address),e.createElement(Qe,null,t.mailAddress),e.createElement(Qe,null,t.phoneNumber),e.createElement(Qe,null,t.url),e.createElement(Qe,null,e.createElement("br",null),t.lineTemp)))),We=Ae.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +118,7 @@
   &::placeholder {
     color: #d5d5d5;
   }
-`,tt=t=>e.createElement(nt,null,e.createElement(rt,{setLineTemp:t.setLineTemp,line:"─────────────────────────",name:"シンプルイズベスト"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-",name:"万里の長城"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜",name:"南国の風"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"───────−- -  -　　　　　　-  - -−───────",name:"侘び寂び"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"○●---------------------------------------------------------●○",name:"綱引き"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",name:"ひし餅"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>★☆★",name:"星に願いを"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊",name:"花園"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡*ﾟ",name:"トキメキ"})),nt=Ae.div`
+`,tt=t=>e.createElement(nt,null,e.createElement(rt,{setLineTemp:t.setLineTemp,line:"─────────────────────────",name:"シンプルイズベスト"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-",name:"万里の長城"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜",name:"南国の風"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"───────−- -  -　　　　　　-  - -−───────",name:"侘び寂び"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"○●---------------------------------------------------------●○",name:"綱引き"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",name:"ひし餅"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>★☆★",name:"星に願いを"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊",name:"秘密の花園"}),e.createElement(rt,{setLineTemp:t.setLineTemp,line:"｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡ﾟ+｡｡.｡･.｡*ﾟ",name:"トキメキ"})),nt=Ae.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,6 +140,7 @@
   padding: 16px;
   border-radius: 4px;
   font-size: 12px;
+  text-align: center;
   background-color: #ffffff;
   transition: all 0.25s ease-out;
 
@@ -170,4 +171,4 @@
       padding: 0;
       color: #272f59;
     }
-    `;(0,n.render)(e.createElement((()=>{const[t,n]=it(""),[r,a]=it(""),[l,o]=it(""),[i,u]=it(""),[s,c]=it(""),[f,d]=it(""),[p,h]=it(""),[m,g]=it(""),[y,v]=it("──────────────────────────"),[b,w]=it(!1);return e.createElement(e.Fragment,null,e.createElement(ut,null),e.createElement(Me,{template:b,setTemplate:w}),e.createElement(Ue,null,e.createElement(He,{lineTemp:y,name:t,nameEn:r,company:l,department:i,address:s,mailAddress:f,phoneNumber:p,url:m}),e.createElement(lt,null,b?e.createElement(tt,{lineTemp:y,setLineTemp:v}):e.createElement(qe,{name:t,nameEn:r,company:l,department:i,address:s,mailAddress:f,phoneNumber:p,url:m,setName:n,setNameEn:a,setCompany:o,setDepartment:u,setAddress:c,setMailAddress:d,setPhoneNumber:h,setUrl:g}))))}),null),document.getElementById("app"))})()})();
+    `;(0,n.render)(e.createElement((()=>{const[t,n]=it(""),[r,a]=it(""),[l,o]=it(""),[i,u]=it(""),[s,c]=it(""),[f,d]=it(""),[p,h]=it(""),[m,g]=it(""),[y,v]=it("─────────────────────────"),[b,w]=it(!1);return e.createElement(e.Fragment,null,e.createElement(ut,null),e.createElement(Me,{template:b,setTemplate:w}),e.createElement(Ue,null,e.createElement(He,{lineTemp:y,name:t,nameEn:r,company:l,department:i,address:s,mailAddress:f,phoneNumber:p,url:m}),e.createElement(lt,null,b?e.createElement(tt,{lineTemp:y,setLineTemp:v}):e.createElement(qe,{name:t,nameEn:r,company:l,department:i,address:s,mailAddress:f,phoneNumber:p,url:m,setName:n,setNameEn:a,setCompany:o,setDepartment:u,setAddress:c,setMailAddress:d,setPhoneNumber:h,setUrl:g}))))}),null),document.getElementById("app"))})()})();

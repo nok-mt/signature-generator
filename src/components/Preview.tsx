@@ -11,7 +11,10 @@ export const Preview: React.FC<InputType> = (props) => {
     <PreviewWrapper>
       <div>
         <PreviewItem>{props.lineTemp}</PreviewItem>
-        <PreviewItem>{props.name}</PreviewItem>
+        <PreviewItem>
+          <br />
+          {props.name}
+        </PreviewItem>
         <PreviewItem>{props.nameEn}</PreviewItem>
         <PreviewItem>{props.company}</PreviewItem>
         <PreviewItem>{props.department}</PreviewItem>
@@ -19,7 +22,10 @@ export const Preview: React.FC<InputType> = (props) => {
         <PreviewItem>{props.mailAddress}</PreviewItem>
         <PreviewItem>{props.phoneNumber}</PreviewItem>
         <PreviewItem>{props.url}</PreviewItem>
-        <PreviewItem>{props.lineTemp}</PreviewItem>
+        <PreviewItem>
+          <br />
+          {props.lineTemp}
+        </PreviewItem>
       </div>
     </PreviewWrapper>
   );

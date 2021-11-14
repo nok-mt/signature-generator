@@ -23,6 +23,7 @@ const TemplateItemWrapper = styled.div`
   padding: 16px;
   border-radius: 4px;
   font-size: 12px;
+  text-align: center;
   background-color: #ffffff;
   transition: all 0.25s ease-out;
 

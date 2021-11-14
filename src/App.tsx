@@ -34,9 +34,7 @@ const App: React.FC = () => {
   const [mailAddress, setMailAddress] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [url, setUrl] = useState<string>("");
-  const [lineTemp, setLineTemp] = useState<string>(
-    "──────────────────────────"
-  );
+  const [lineTemp, setLineTemp] = useState<string>("─────────────────────────");
   const [template, setTemplate] = useState<boolean>(false);
 
   return (
